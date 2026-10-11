@@ -861,6 +861,13 @@ function buildObjectiveCall(snap, levelGems, deathHistory) {
       }
     }
   }
+  // ROUTE_BURN (gated): the gem's collector floors vanish long before the gem (route_burn.cjs).
+  const mfObj = (snap.drones.tl.y - 1) / 0.2;
+  for (const g of alive) {
+    const burn = require("./route_burn.cjs").routeBurnLine(snap.level, g.x, g.y, mfObj);
+    const e = burn && presented.find((p) => p.name === g.name);
+    if (e) { e.line += burn; e.crit += burn; }
+  }
   for (const e of presented) {
     lines.push(e.line);
     criteria[e.name] = e.crit;
