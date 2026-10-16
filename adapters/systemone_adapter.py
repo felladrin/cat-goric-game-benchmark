@@ -10,6 +10,7 @@ else is rejected with 422 rather than guessed at.
     python systemone_adapter.py --backend autojev  --model-dir /models/Darwin-27B-ZTC
     python systemone_adapter.py --backend intern   --model-dir /models/Intern-Decision-4B
     python systemone_adapter.py --backend bosun    --model-dir /models/bosun-v3.1-1.7b
+    python systemone_adapter.py --backend decision2 --model-dir /models/Decision-2.0-Lux-9B
 
 See docs/bring-your-own-model.md.
 """
@@ -106,7 +107,25 @@ def bosun_backend(model_dir, device):
     return decide
 
 
-BACKENDS = {"phocinae": phocinae_backend, "autojev": autojev_backend, "intern": intern_backend, "bosun": bosun_backend}
+def decision2_backend(model_dir, device):
+    # vLLM Semantic Router's Decision 2.0 packages ship their runtime (decision2/) next to
+    # the weights, with a native system_one that returns probabilities per option name.
+    # Its HIP-graph and Triton fast path is verified on gfx942 only; serve with
+    # DECISION2_FAST=0 elsewhere (the eager forward gives the same answers).
+    sys.path.insert(0, model_dir)
+    from decision2 import Decision2
+
+    model = Decision2.from_pretrained(model_dir, device=device)
+
+    def decide(state, questions):
+        answers = model.system_one(state=state, questions=questions)["answers"]
+        return {i: [answers[i]["probabilities"][n] for n in questions[i]["criteria"]] for i in questions}
+
+    return decide
+
+
+BACKENDS = {"phocinae": phocinae_backend, "autojev": autojev_backend, "intern": intern_backend, "bosun": bosun_backend,
+            "decision2": decision2_backend}
 
 
 def validate(body):
