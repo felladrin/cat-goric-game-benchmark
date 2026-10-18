@@ -17,7 +17,7 @@ Each model plays the whole game (14 levels in one run, up to 100 lives per level
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | PurpleMIST-Flash-1.0 | 7.9B | 100% | yes | 14.0 / 14 | 22 |
 | 2 | Darwin-27B-ZTC | 25.6B | 40% | yes | 13.4 / 14 | 90.5 |
-| 3 | Halogen-Qwen3.8-Flash-Next-Instruct | 180.0B | 20% | yes | 13.2 / 14 | 127 |
+| 3 | Qwen3.8-Flash-Next | 180.0B | 20% | yes | 13.2 / 14 | 127 |
 | 4 | d3 | 26.1B | 20% | yes | 9.0 / 14 | 119 |
 | 5 | d3-flash | 8.4B | 0% | no | 13.0 / 14 | n/a |
 | 6 | h2o-lightning-4b | 4.5B | 0% | no | 6.2 / 14 | n/a |

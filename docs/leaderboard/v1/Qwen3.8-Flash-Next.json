@@ -2,7 +2,7 @@
   "version": "v1",
   "offVersion": [],
   "commit": "194ac28",
-  "model": "Halogen-Qwen3.8-Flash-Next-Instruct",
+  "model": "Qwen3.8-Flash-Next",
   "endpoint": "halogen",
   "seeds": [
     1,
@@ -19,7 +19,7 @@
     "levelsCleared": 13.2,
     "medianDeaths": 127
   },
-  "summary": "Halogen-Qwen3.8-Flash-Next-Instruct (halogen, preset winning): won 1/5 seeds [s1 L13, s2 won, s3 L13, s4 L13, s5 L13], 696 deaths in total",
+  "summary": "Qwen3.8-Flash-Next (halogen, preset winning): won 1/5 seeds [s1 L13, s2 won, s3 L13, s4 L13, s5 L13], 696 deaths in total",
   "results": [
     {
       "seed": 1,
@@ -49,7 +49,7 @@
         "level": 13,
         "reason": "death_cap_unwinnable"
       },
-      "model": "Halogen-Qwen3.8-Flash-Next-Instruct",
+      "model": "Qwen3.8-Flash-Next",
       "endpoint": "halogen",
       "build": {
         "PRUNE_FATAL": "1",
@@ -112,7 +112,7 @@
       "classifierCalls": 6073,
       "wallSeconds": 4474,
       "stopped": null,
-      "model": "Halogen-Qwen3.8-Flash-Next-Instruct",
+      "model": "Qwen3.8-Flash-Next",
       "endpoint": "halogen",
       "build": {
         "PRUNE_FATAL": "1",
@@ -178,7 +178,7 @@
         "level": 13,
         "reason": "death_cap"
       },
-      "model": "Halogen-Qwen3.8-Flash-Next-Instruct",
+      "model": "Qwen3.8-Flash-Next",
       "endpoint": "halogen",
       "build": {
         "PRUNE_FATAL": "1",
@@ -244,7 +244,7 @@
         "level": 13,
         "reason": "death_cap_unwinnable"
       },
-      "model": "Halogen-Qwen3.8-Flash-Next-Instruct",
+      "model": "Qwen3.8-Flash-Next",
       "endpoint": "halogen",
       "build": {
         "PRUNE_FATAL": "1",
@@ -310,7 +310,7 @@
         "level": 13,
         "reason": "death_cap_unwinnable"
       },
-      "model": "Halogen-Qwen3.8-Flash-Next-Instruct",
+      "model": "Qwen3.8-Flash-Next",
       "endpoint": "halogen",
       "build": {
         "PRUNE_FATAL": "1",
