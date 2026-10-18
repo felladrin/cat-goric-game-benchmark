@@ -16,6 +16,7 @@ The ranking with its columns is in the [readme](../readme.md#leaderboard). Here 
 | Qwen3.8-Flash-Next | lost on L13, 135 deaths | won, 127 deaths | lost on L13, 158 deaths | lost on L13, 140 deaths | lost on L13, 136 deaths |
 | d3 | won, 119 deaths | lost on L6, 103 deaths | lost on L13, 120 deaths | lost on L6, 136 deaths | lost on L6, 107 deaths |
 | d3-flash | lost on L13, 179 deaths | lost on L13, 120 deaths | lost on L13, 126 deaths | lost on L13, 142 deaths | lost on L13, 213 deaths |
+| Decision-2.0-Lux-9B | lost on L9, 117 deaths | lost on L9, 128 deaths | lost on L9, 123 deaths | lost on L9, 107 deaths | lost on L9, 125 deaths |
 | h2o-lightning-4b | lost on L2, 100 deaths | lost on L2, 100 deaths | lost on L9, 216 deaths | lost on L9, 130 deaths | lost on L9, 206 deaths |
 | Intern-Decision-0.8B | lost on L4, 124 deaths | lost on L4, 160 deaths | lost on L4, 134 deaths | lost on L4, 131 deaths | lost on L4, 112 deaths |
 | decider-2b | lost on L4, 100 deaths | lost on L4, 168 deaths | lost on L4, 134 deaths | lost on L4, 177 deaths | lost on L4, 166 deaths |
